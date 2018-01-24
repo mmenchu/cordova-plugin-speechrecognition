@@ -51,6 +51,13 @@
     <config-file target="*-Info.plist" parent="NSSpeechRecognitionUsageDescription">
       <string>Request to use Speech Recognition</string>
     </config-file>
+    
+    <config-file target="*-Info.plist" parent="NSAppTransportSecurity">
+      <dict>
+          <key>NSAllowsArbitraryLoads</key>
+          <true/>
+      </dict>
+    </config-file>
 
     <header-file src="src/ios/SpeechRecognition.h"/>
     <source-file src="src/ios/SpeechRecognition.m"/>
