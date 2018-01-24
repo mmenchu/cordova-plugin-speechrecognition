@@ -159,8 +159,6 @@
         NSLog(@"stopListening()");
 
         if ( self.audioEngine.isRunning ) {
-            [self.inputNode removeTapOnBus:0];
-            [self.inputNode reset];
             [self.audioEngine stop];
             [self.recognitionRequest endAudio];
             [self.recognitionTask cancel];
