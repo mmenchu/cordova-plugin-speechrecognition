@@ -159,13 +159,13 @@
         NSLog(@"stopListening()");
 
         if ( self.audioEngine.isRunning ) {
-            [self.audioEngine.inputNode removeTapOnBus:0];
-            [self.audioEngine.inputNode reset];
+            //[self.audioEngine.inputNode removeTapOnBus:0];
+            //[self.audioEngine.inputNode reset];
             [self.audioEngine stop];
             [self.recognitionRequest endAudio];
-            [self.recognitionTask cancel];
-            self.recognitionTask = nil;
-            self.recognitionRequest = nil;
+            //[self.recognitionTask cancel];
+            //self.recognitionTask = nil;
+            //self.recognitionRequest = nil;
         }
 
         CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
